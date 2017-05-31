@@ -1,0 +1,2322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170531 19:12:29.719" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/robot/workspace/Project-CI-LaxmanaT-MasoomehB/robot-backend/test.suite.robot" id="s1" name="Test.Suite">
+<test id="s1-t1" name="Test1-Create Bedroom">
+<kw name="Create A New bedroom" library="bedroom_operations">
+<kw name="Create Bedroom Data" library="bedroom_operations">
+<assign>
+<var>${request_body}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${bedStatusId}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.939" level="INFO">${bedStatusId} = 2</msg>
+<status status="PASS" endtime="20170531 19:12:29.939" starttime="20170531 19:12:29.939"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${bedStatusCode}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.940" level="INFO">${bedStatusCode} = 1</msg>
+<status status="PASS" endtime="20170531 19:12:29.940" starttime="20170531 19:12:29.939"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>VACANT</arg>
+</arguments>
+<assign>
+<var>${bedStatusName}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.941" level="INFO">${bedStatusName} = VACANT</msg>
+<status status="PASS" endtime="20170531 19:12:29.941" starttime="20170531 19:12:29.940"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${bedTypeId}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.942" level="INFO">${bedTypeId} = 4</msg>
+<status status="PASS" endtime="20170531 19:12:29.942" starttime="20170531 19:12:29.941"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>TOP BED TWIN</arg>
+</arguments>
+<assign>
+<var>${bedTypeName}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.942" level="INFO">${bedTypeName} = TOP BED TWIN</msg>
+<status status="PASS" endtime="20170531 19:12:29.942" starttime="20170531 19:12:29.942"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${id}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.943" level="INFO">${id} = 200</msg>
+<status status="PASS" endtime="20170531 19:12:29.943" starttime="20170531 19:12:29.942"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>15</arg>
+<arg>[UPPER]</arg>
+</arguments>
+<assign>
+<var>${description}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.943" level="INFO">${description} = PHUHNQIJFLSBINV</msg>
+<status status="PASS" endtime="20170531 19:12:29.943" starttime="20170531 19:12:29.943"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${room_description_suite}</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.945" level="INFO">${room_description_suite} = PHUHNQIJFLSBINV</msg>
+<status status="PASS" endtime="20170531 19:12:29.946" starttime="20170531 19:12:29.943"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>1</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${floor}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.947" level="INFO">${floor} = 1</msg>
+<status status="PASS" endtime="20170531 19:12:29.947" starttime="20170531 19:12:29.946"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>123456789</arg>
+</arguments>
+<assign>
+<var>${number}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.948" level="INFO">${number} = 6647</msg>
+<status status="PASS" endtime="20170531 19:12:29.948" starttime="20170531 19:12:29.947"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>2</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${priceDaily}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.948" level="INFO">${priceDaily} = 25</msg>
+<status status="PASS" endtime="20170531 19:12:29.948" starttime="20170531 19:12:29.948"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${bedStatusId}</arg>
+<arg>code=${bedStatusCode}</arg>
+<arg>name=${bedStatusName}</arg>
+</arguments>
+<assign>
+<var>${bedStatusDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.950" level="INFO">${bedStatusDict} = {u'id': u'2', u'code': u'1', u'name': u'VACANT'}</msg>
+<status status="PASS" endtime="20170531 19:12:29.950" starttime="20170531 19:12:29.949"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${bedTypeId}</arg>
+<arg>name=${bedTypeName}</arg>
+</arguments>
+<assign>
+<var>${typeIdDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.951" level="INFO">${typeIdDict} = {u'id': u'4', u'name': u'TOP BED TWIN'}</msg>
+<status status="PASS" endtime="20170531 19:12:29.951" starttime="20170531 19:12:29.951"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${id}</arg>
+<arg>description=${description}</arg>
+<arg>floor=${floor}</arg>
+<arg>number=${number}</arg>
+<arg>priceDaily=${priceDaily}</arg>
+<arg>bedroomStatusId=${bedStatusDict}</arg>
+<arg>typeBedroomId=${typeIdDict}</arg>
+</arguments>
+<assign>
+<var>${dictionary}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.953" level="INFO">${dictionary} = {u'id': u'200', u'description': u'PHUHNQIJFLSBINV', u'floor': u'1', u'number': u'6647', u'priceDaily': u'25', u'bedroomStatusId': {u'code': u'1', u'id': u'2', u'name': u'VACANT'}, u'typeBedroomId': {u...</msg>
+<status status="PASS" endtime="20170531 19:12:29.953" starttime="20170531 19:12:29.952"></status>
+</kw>
+<kw name="Stringify Json" library="HttpLibrary.HTTP">
+<doc>Converts the data structure to a string containing its JSON string representation</doc>
+<arguments>
+<arg>${dictionary}</arg>
+</arguments>
+<assign>
+<var>${bedroom_json}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.954" level="INFO">${bedroom_json} = {"id": "200", "description": "PHUHNQIJFLSBINV", "floor": "1", "number": "6647", "priceDaily": "25", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": ...</msg>
+<status status="PASS" endtime="20170531 19:12:29.954" starttime="20170531 19:12:29.953"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${bedroom_json}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:29.955" starttime="20170531 19:12:29.954"></status>
+</kw>
+<msg timestamp="20170531 19:12:29.955" level="INFO">${request_body} = {"id": "200", "description": "PHUHNQIJFLSBINV", "floor": "1", "number": "6647", "priceDaily": "25", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": ...</msg>
+<status status="PASS" endtime="20170531 19:12:29.955" starttime="20170531 19:12:29.939"></status>
+</kw>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.956" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:29.956" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:29.957" starttime="20170531 19:12:29.955"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.957" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:29.957" starttime="20170531 19:12:29.957"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.959" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:29.959" starttime="20170531 19:12:29.958"></status>
+</kw>
+<kw name="Set Request Body" library="HttpLibrary.HTTP">
+<doc>Set the request body for the next HTTP request.</doc>
+<arguments>
+<arg>${request_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.959" level="INFO">Request body set to "{"id": "200", "description": "PHUHNQIJFLSBINV", "floor": "1", "number": "6647", "priceDaily": "25", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": "TOP BED TWIN"}}".</msg>
+<status status="PASS" endtime="20170531 19:12:29.960" starttime="20170531 19:12:29.959"></status>
+</kw>
+<kw name="POST" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP POST request.</doc>
+<arguments>
+<arg>${post_create_new_bedroom_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:29.976" starttime="20170531 19:12:29.960"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:29.977" level="INFO">${status_code} = 204 No Content</msg>
+<status status="PASS" endtime="20170531 19:12:29.977" starttime="20170531 19:12:29.976"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:29.977" starttime="20170531 19:12:29.977"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_No_Content}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:29.978" starttime="20170531 19:12:29.977"></status>
+</kw>
+<kw name="Get Last Created Bedroom" library="bedroom_operations">
+<assign>
+<var>${newBedroom}</var>
+</assign>
+<kw name="Get ID Of The Last Bedroom" library="bedroom_operations">
+<assign>
+<var>${bedroomId}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.979" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:29.979" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:29.979" starttime="20170531 19:12:29.979"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.980" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:29.980" starttime="20170531 19:12:29.980"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:29.980" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:29.981" starttime="20170531 19:12:29.980"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_all_bedrooms_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:29.995" starttime="20170531 19:12:29.981"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${responseStatus}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.003" level="INFO">${responseStatus} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.003" starttime="20170531 19:12:29.995"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${responseStatus}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.004" starttime="20170531 19:12:30.003"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bodyRequest}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.004" level="INFO">${bodyRequest} = [{"id":12,"description":"BEDROOM ACCESSIBLE","floor":1,"number":200,"priceDaily":250.00,"bedroomStatusId":{"id":1,"code":0,"name":"VACANT"},"typeBedroomId":{"id":6,"name":"WHEELCHAIR ACCESS"}},{"id":1...</msg>
+<status status="PASS" endtime="20170531 19:12:30.005" starttime="20170531 19:12:30.004"></status>
+</kw>
+<kw name="Get Total Number of Bedrooms" library="bedroom_operations">
+<assign>
+<var>${number_of_bedrooms}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.006" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.006" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.006" starttime="20170531 19:12:30.005"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedrooms_counter_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.012" starttime="20170531 19:12:30.006"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.013" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.013" starttime="20170531 19:12:30.012"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${response_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.013" level="INFO">${response_body} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.013" starttime="20170531 19:12:30.013"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.014" starttime="20170531 19:12:30.013"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.014" starttime="20170531 19:12:30.014"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.015" starttime="20170531 19:12:30.015"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.016" level="INFO">${number_of_bedrooms} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.016" starttime="20170531 19:12:30.005"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${number_of_bedrooms}-1</arg>
+</arguments>
+<assign>
+<var>${last_index}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.017" level="INFO">${last_index} = 117</msg>
+<status status="PASS" endtime="20170531 19:12:30.017" starttime="20170531 19:12:30.016"></status>
+</kw>
+<kw name="Get Json Value" library="HttpLibrary.HTTP">
+<doc>Get the target node of the JSON document `json_string` specified by `json_pointer`.</doc>
+<arguments>
+<arg>${bodyRequest}</arg>
+<arg>/${last_index}/id</arg>
+</arguments>
+<assign>
+<var>${json_id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.019" level="INFO">${json_id} = 168</msg>
+<status status="PASS" endtime="20170531 19:12:30.019" starttime="20170531 19:12:30.017"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${json_id}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.019" starttime="20170531 19:12:30.019"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.019" level="INFO">${bedroomId} = 168</msg>
+<status status="PASS" endtime="20170531 19:12:30.019" starttime="20170531 19:12:29.978"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${get_bedroom_endpoint}</arg>
+<arg>${bedroomId}</arg>
+</arguments>
+<assign>
+<var>${get_bedroom_endpoint}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.020" level="INFO">${get_bedroom_endpoint} = /hotel-rest/webresources/bedroom/168</msg>
+<status status="PASS" endtime="20170531 19:12:30.020" starttime="20170531 19:12:30.020"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedroom_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.024" starttime="20170531 19:12:30.020"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.025" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.025" starttime="20170531 19:12:30.024"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bedroom_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.025" level="INFO">${bedroom_body} = {"id":168,"description":"PHUHNQIJFLSBINV","floor":1,"number":6647,"priceDaily":25,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.025" starttime="20170531 19:12:30.025"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.026" starttime="20170531 19:12:30.025"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${bedroom_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.026" starttime="20170531 19:12:30.026"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.027" starttime="20170531 19:12:30.026"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${bedroom_body_suite}</arg>
+<arg>${bedroom_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.028" level="INFO">${bedroom_body_suite} = {"id":168,"description":"PHUHNQIJFLSBINV","floor":1,"number":6647,"priceDaily":25,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.028" starttime="20170531 19:12:30.027"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.029" level="INFO">${newBedroom} = {"id":168,"description":"PHUHNQIJFLSBINV","floor":1,"number":6647,"priceDaily":25,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.029" starttime="20170531 19:12:29.978"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${newBedroom}</arg>
+<arg>${room_description_suite}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.029" starttime="20170531 19:12:30.029"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.029" starttime="20170531 19:12:29.938"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.029" critical="yes" starttime="20170531 19:12:29.938"></status>
+</test>
+<test id="s1-t2" name="Test2-Delete Bedroom">
+<kw name="Delete A Bedroom" library="bedroom_operations">
+<kw name="Get ID Of The Last Bedroom" library="bedroom_operations">
+<assign>
+<var>${id_to_delete}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.031" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.031" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.031" starttime="20170531 19:12:30.031"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.032" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.032" starttime="20170531 19:12:30.032"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.032" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.032" starttime="20170531 19:12:30.032"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_all_bedrooms_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.046" starttime="20170531 19:12:30.033"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${responseStatus}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.047" level="INFO">${responseStatus} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.047" starttime="20170531 19:12:30.047"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${responseStatus}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.048" starttime="20170531 19:12:30.047"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bodyRequest}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.048" level="INFO">${bodyRequest} = [{"id":12,"description":"BEDROOM ACCESSIBLE","floor":1,"number":200,"priceDaily":250.00,"bedroomStatusId":{"id":1,"code":0,"name":"VACANT"},"typeBedroomId":{"id":6,"name":"WHEELCHAIR ACCESS"}},{"id":1...</msg>
+<status status="PASS" endtime="20170531 19:12:30.048" starttime="20170531 19:12:30.048"></status>
+</kw>
+<kw name="Get Total Number of Bedrooms" library="bedroom_operations">
+<assign>
+<var>${number_of_bedrooms}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.049" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.049" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.049" starttime="20170531 19:12:30.049"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedrooms_counter_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.061" starttime="20170531 19:12:30.050"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.062" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.062" starttime="20170531 19:12:30.061"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${response_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.062" level="INFO">${response_body} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.062" starttime="20170531 19:12:30.062"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.063" starttime="20170531 19:12:30.063"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.064" starttime="20170531 19:12:30.063"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.064" starttime="20170531 19:12:30.064"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.065" level="INFO">${number_of_bedrooms} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.065" starttime="20170531 19:12:30.048"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${number_of_bedrooms}-1</arg>
+</arguments>
+<assign>
+<var>${last_index}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.066" level="INFO">${last_index} = 117</msg>
+<status status="PASS" endtime="20170531 19:12:30.066" starttime="20170531 19:12:30.065"></status>
+</kw>
+<kw name="Get Json Value" library="HttpLibrary.HTTP">
+<doc>Get the target node of the JSON document `json_string` specified by `json_pointer`.</doc>
+<arguments>
+<arg>${bodyRequest}</arg>
+<arg>/${last_index}/id</arg>
+</arguments>
+<assign>
+<var>${json_id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.068" level="INFO">${json_id} = 168</msg>
+<status status="PASS" endtime="20170531 19:12:30.068" starttime="20170531 19:12:30.066"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${json_id}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.069" starttime="20170531 19:12:30.068"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.069" level="INFO">${id_to_delete} = 168</msg>
+<status status="PASS" endtime="20170531 19:12:30.069" starttime="20170531 19:12:30.031"></status>
+</kw>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.069" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.069" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.070" starttime="20170531 19:12:30.069"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.070" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.070" starttime="20170531 19:12:30.070"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.074" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.074" starttime="20170531 19:12:30.073"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Deleting a bedroom${\n}ID:${id_to_delete}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.075" starttime="20170531 19:12:30.074"></status>
+</kw>
+<kw name="DELETE" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP DELETE request.</doc>
+<arguments>
+<arg>${delete_a_bedroom_endpoint}${id_to_delete}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.078" level="FAIL">Variable '${delete_a_bedroom_endpoint}' not found. Did you mean:
+    ${delete_bedroom_endpoint}
+    ${delete_userroom_endpoint}
+    ${get_bedroom_endpoint}</msg>
+<status status="FAIL" endtime="20170531 19:12:30.078" starttime="20170531 19:12:30.075"></status>
+</kw>
+<status status="FAIL" endtime="20170531 19:12:30.078" starttime="20170531 19:12:30.030"></status>
+</kw>
+<status status="FAIL" endtime="20170531 19:12:30.089" critical="yes" starttime="20170531 19:12:30.030">Variable '${delete_a_bedroom_endpoint}' not found. Did you mean:
+    ${delete_bedroom_endpoint}
+    ${delete_userroom_endpoint}
+    ${get_bedroom_endpoint}</status>
+</test>
+<test id="s1-t3" name="Test3-Get Bedroom">
+<kw name="Get Last Created Bedroom" library="bedroom_operations">
+<kw name="Get ID Of The Last Bedroom" library="bedroom_operations">
+<assign>
+<var>${bedroomId}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.092" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.092" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.092" starttime="20170531 19:12:30.092"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.093" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.093" starttime="20170531 19:12:30.092"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.093" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.093" starttime="20170531 19:12:30.093"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_all_bedrooms_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.105" starttime="20170531 19:12:30.094"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${responseStatus}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.105" level="INFO">${responseStatus} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.106" starttime="20170531 19:12:30.105"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${responseStatus}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.106" starttime="20170531 19:12:30.106"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bodyRequest}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.107" level="INFO">${bodyRequest} = [{"id":12,"description":"BEDROOM ACCESSIBLE","floor":1,"number":200,"priceDaily":250.00,"bedroomStatusId":{"id":1,"code":0,"name":"VACANT"},"typeBedroomId":{"id":6,"name":"WHEELCHAIR ACCESS"}},{"id":1...</msg>
+<status status="PASS" endtime="20170531 19:12:30.107" starttime="20170531 19:12:30.106"></status>
+</kw>
+<kw name="Get Total Number of Bedrooms" library="bedroom_operations">
+<assign>
+<var>${number_of_bedrooms}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.108" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.108" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.108" starttime="20170531 19:12:30.107"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedrooms_counter_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.114" starttime="20170531 19:12:30.108"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.116" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.117" starttime="20170531 19:12:30.114"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${response_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.118" level="INFO">${response_body} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.118" starttime="20170531 19:12:30.117"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.119" starttime="20170531 19:12:30.118"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.120" starttime="20170531 19:12:30.119"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.122" starttime="20170531 19:12:30.120"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.123" level="INFO">${number_of_bedrooms} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.123" starttime="20170531 19:12:30.107"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${number_of_bedrooms}-1</arg>
+</arguments>
+<assign>
+<var>${last_index}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.124" level="INFO">${last_index} = 117</msg>
+<status status="PASS" endtime="20170531 19:12:30.124" starttime="20170531 19:12:30.123"></status>
+</kw>
+<kw name="Get Json Value" library="HttpLibrary.HTTP">
+<doc>Get the target node of the JSON document `json_string` specified by `json_pointer`.</doc>
+<arguments>
+<arg>${bodyRequest}</arg>
+<arg>/${last_index}/id</arg>
+</arguments>
+<assign>
+<var>${json_id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.126" level="INFO">${json_id} = 168</msg>
+<status status="PASS" endtime="20170531 19:12:30.126" starttime="20170531 19:12:30.124"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${json_id}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.127" starttime="20170531 19:12:30.126"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.127" level="INFO">${bedroomId} = 168</msg>
+<status status="PASS" endtime="20170531 19:12:30.127" starttime="20170531 19:12:30.091"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${get_bedroom_endpoint}</arg>
+<arg>${bedroomId}</arg>
+</arguments>
+<assign>
+<var>${get_bedroom_endpoint}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.128" level="INFO">${get_bedroom_endpoint} = /hotel-rest/webresources/bedroom/168</msg>
+<status status="PASS" endtime="20170531 19:12:30.128" starttime="20170531 19:12:30.127"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedroom_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.132" starttime="20170531 19:12:30.128"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.133" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.133" starttime="20170531 19:12:30.133"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bedroom_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.134" level="INFO">${bedroom_body} = {"id":168,"description":"PHUHNQIJFLSBINV","floor":1,"number":6647,"priceDaily":25,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.134" starttime="20170531 19:12:30.133"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.134" starttime="20170531 19:12:30.134"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${bedroom_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.135" starttime="20170531 19:12:30.134"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.136" starttime="20170531 19:12:30.135"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${bedroom_body_suite}</arg>
+<arg>${bedroom_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.136" level="INFO">${bedroom_body_suite} = {"id":168,"description":"PHUHNQIJFLSBINV","floor":1,"number":6647,"priceDaily":25,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.136" starttime="20170531 19:12:30.136"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.137" starttime="20170531 19:12:30.091"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.137" critical="yes" starttime="20170531 19:12:30.090"></status>
+</test>
+<test id="s1-t4" name="Test4- Get All Bedrooms">
+<kw name="Get All Bedrooms" library="bedroom_operations">
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.139" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.139" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.139" starttime="20170531 19:12:30.138"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.139" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.139" starttime="20170531 19:12:30.139"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.140" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.140" starttime="20170531 19:12:30.140"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_all_bedrooms_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.148" starttime="20170531 19:12:30.141"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.149" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.149" starttime="20170531 19:12:30.148"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${response_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.149" level="INFO">${response_body} = [{"id":12,"description":"BEDROOM ACCESSIBLE","floor":1,"number":200,"priceDaily":250.00,"bedroomStatusId":{"id":1,"code":0,"name":"VACANT"},"typeBedroomId":{"id":6,"name":"WHEELCHAIR ACCESS"}},{"id":1...</msg>
+<status status="PASS" endtime="20170531 19:12:30.149" starttime="20170531 19:12:30.149"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.150" starttime="20170531 19:12:30.150"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.151" starttime="20170531 19:12:30.150"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.151" starttime="20170531 19:12:30.151"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.152" starttime="20170531 19:12:30.138"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.152" critical="yes" starttime="20170531 19:12:30.137"></status>
+</test>
+<test id="s1-t5" name="Test5-Edit Bedroom Data">
+<kw name="Edit Bedroom Data" library="bedroom_operations">
+<kw name="Create A New bedroom" library="bedroom_operations">
+<kw name="Create Bedroom Data" library="bedroom_operations">
+<assign>
+<var>${request_body}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${bedStatusId}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.154" level="INFO">${bedStatusId} = 2</msg>
+<status status="PASS" endtime="20170531 19:12:30.154" starttime="20170531 19:12:30.154"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${bedStatusCode}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.155" level="INFO">${bedStatusCode} = 1</msg>
+<status status="PASS" endtime="20170531 19:12:30.155" starttime="20170531 19:12:30.154"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>VACANT</arg>
+</arguments>
+<assign>
+<var>${bedStatusName}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.155" level="INFO">${bedStatusName} = VACANT</msg>
+<status status="PASS" endtime="20170531 19:12:30.155" starttime="20170531 19:12:30.155"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${bedTypeId}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.156" level="INFO">${bedTypeId} = 4</msg>
+<status status="PASS" endtime="20170531 19:12:30.156" starttime="20170531 19:12:30.155"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>TOP BED TWIN</arg>
+</arguments>
+<assign>
+<var>${bedTypeName}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.156" level="INFO">${bedTypeName} = TOP BED TWIN</msg>
+<status status="PASS" endtime="20170531 19:12:30.156" starttime="20170531 19:12:30.156"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.157" level="INFO">${id} = 200</msg>
+<status status="PASS" endtime="20170531 19:12:30.157" starttime="20170531 19:12:30.156"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>15</arg>
+<arg>[UPPER]</arg>
+</arguments>
+<assign>
+<var>${description}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.157" level="INFO">${description} = OYVWXKDLRVEVZID</msg>
+<status status="PASS" endtime="20170531 19:12:30.157" starttime="20170531 19:12:30.157"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${room_description_suite}</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.158" level="INFO">${room_description_suite} = OYVWXKDLRVEVZID</msg>
+<status status="PASS" endtime="20170531 19:12:30.158" starttime="20170531 19:12:30.157"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>1</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${floor}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.158" level="INFO">${floor} = 0</msg>
+<status status="PASS" endtime="20170531 19:12:30.158" starttime="20170531 19:12:30.158"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>123456789</arg>
+</arguments>
+<assign>
+<var>${number}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.159" level="INFO">${number} = 4128</msg>
+<status status="PASS" endtime="20170531 19:12:30.159" starttime="20170531 19:12:30.159"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>2</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${priceDaily}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.159" level="INFO">${priceDaily} = 19</msg>
+<status status="PASS" endtime="20170531 19:12:30.159" starttime="20170531 19:12:30.159"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${bedStatusId}</arg>
+<arg>code=${bedStatusCode}</arg>
+<arg>name=${bedStatusName}</arg>
+</arguments>
+<assign>
+<var>${bedStatusDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.160" level="INFO">${bedStatusDict} = {u'id': u'2', u'code': u'1', u'name': u'VACANT'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.160" starttime="20170531 19:12:30.160"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${bedTypeId}</arg>
+<arg>name=${bedTypeName}</arg>
+</arguments>
+<assign>
+<var>${typeIdDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.161" level="INFO">${typeIdDict} = {u'id': u'4', u'name': u'TOP BED TWIN'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.161" starttime="20170531 19:12:30.161"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${id}</arg>
+<arg>description=${description}</arg>
+<arg>floor=${floor}</arg>
+<arg>number=${number}</arg>
+<arg>priceDaily=${priceDaily}</arg>
+<arg>bedroomStatusId=${bedStatusDict}</arg>
+<arg>typeBedroomId=${typeIdDict}</arg>
+</arguments>
+<assign>
+<var>${dictionary}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.162" level="INFO">${dictionary} = {u'id': u'200', u'description': u'OYVWXKDLRVEVZID', u'floor': u'0', u'number': u'4128', u'priceDaily': u'19', u'bedroomStatusId': {u'code': u'1', u'id': u'2', u'name': u'VACANT'}, u'typeBedroomId': {u...</msg>
+<status status="PASS" endtime="20170531 19:12:30.162" starttime="20170531 19:12:30.161"></status>
+</kw>
+<kw name="Stringify Json" library="HttpLibrary.HTTP">
+<doc>Converts the data structure to a string containing its JSON string representation</doc>
+<arguments>
+<arg>${dictionary}</arg>
+</arguments>
+<assign>
+<var>${bedroom_json}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.163" level="INFO">${bedroom_json} = {"id": "200", "description": "OYVWXKDLRVEVZID", "floor": "0", "number": "4128", "priceDaily": "19", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": ...</msg>
+<status status="PASS" endtime="20170531 19:12:30.163" starttime="20170531 19:12:30.162"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${bedroom_json}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.163" starttime="20170531 19:12:30.163"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.164" level="INFO">${request_body} = {"id": "200", "description": "OYVWXKDLRVEVZID", "floor": "0", "number": "4128", "priceDaily": "19", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": ...</msg>
+<status status="PASS" endtime="20170531 19:12:30.164" starttime="20170531 19:12:30.153"></status>
+</kw>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.164" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.164" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.164" starttime="20170531 19:12:30.164"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.165" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.165" starttime="20170531 19:12:30.164"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.165" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.166" starttime="20170531 19:12:30.165"></status>
+</kw>
+<kw name="Set Request Body" library="HttpLibrary.HTTP">
+<doc>Set the request body for the next HTTP request.</doc>
+<arguments>
+<arg>${request_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.166" level="INFO">Request body set to "{"id": "200", "description": "OYVWXKDLRVEVZID", "floor": "0", "number": "4128", "priceDaily": "19", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": "TOP BED TWIN"}}".</msg>
+<status status="PASS" endtime="20170531 19:12:30.166" starttime="20170531 19:12:30.166"></status>
+</kw>
+<kw name="POST" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP POST request.</doc>
+<arguments>
+<arg>${post_create_new_bedroom_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.196" starttime="20170531 19:12:30.166"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.197" level="INFO">${status_code} = 204 No Content</msg>
+<status status="PASS" endtime="20170531 19:12:30.197" starttime="20170531 19:12:30.197"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.198" starttime="20170531 19:12:30.198"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_No_Content}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.199" starttime="20170531 19:12:30.199"></status>
+</kw>
+<kw name="Get Last Created Bedroom" library="bedroom_operations">
+<assign>
+<var>${newBedroom}</var>
+</assign>
+<kw name="Get ID Of The Last Bedroom" library="bedroom_operations">
+<assign>
+<var>${bedroomId}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.201" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.201" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.201" starttime="20170531 19:12:30.200"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.202" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.202" starttime="20170531 19:12:30.201"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.203" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.203" starttime="20170531 19:12:30.202"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_all_bedrooms_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.212" starttime="20170531 19:12:30.203"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${responseStatus}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.212" level="INFO">${responseStatus} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.212" starttime="20170531 19:12:30.212"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${responseStatus}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.213" starttime="20170531 19:12:30.213"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bodyRequest}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.214" level="INFO">${bodyRequest} = [{"id":12,"description":"BEDROOM ACCESSIBLE","floor":1,"number":200,"priceDaily":250.00,"bedroomStatusId":{"id":1,"code":0,"name":"VACANT"},"typeBedroomId":{"id":6,"name":"WHEELCHAIR ACCESS"}},{"id":1...</msg>
+<status status="PASS" endtime="20170531 19:12:30.214" starttime="20170531 19:12:30.213"></status>
+</kw>
+<kw name="Get Total Number of Bedrooms" library="bedroom_operations">
+<assign>
+<var>${number_of_bedrooms}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.215" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.215" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.215" starttime="20170531 19:12:30.214"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedrooms_counter_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.227" starttime="20170531 19:12:30.216"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.227" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.228" starttime="20170531 19:12:30.227"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${response_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.228" level="INFO">${response_body} = 119</msg>
+<status status="PASS" endtime="20170531 19:12:30.228" starttime="20170531 19:12:30.228"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.229" starttime="20170531 19:12:30.228"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.243" starttime="20170531 19:12:30.229"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.244" starttime="20170531 19:12:30.243"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.244" level="INFO">${number_of_bedrooms} = 119</msg>
+<status status="PASS" endtime="20170531 19:12:30.244" starttime="20170531 19:12:30.214"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${number_of_bedrooms}-1</arg>
+</arguments>
+<assign>
+<var>${last_index}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.245" level="INFO">${last_index} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.246" starttime="20170531 19:12:30.245"></status>
+</kw>
+<kw name="Get Json Value" library="HttpLibrary.HTTP">
+<doc>Get the target node of the JSON document `json_string` specified by `json_pointer`.</doc>
+<arguments>
+<arg>${bodyRequest}</arg>
+<arg>/${last_index}/id</arg>
+</arguments>
+<assign>
+<var>${json_id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.248" level="INFO">${json_id} = 169</msg>
+<status status="PASS" endtime="20170531 19:12:30.248" starttime="20170531 19:12:30.246"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${json_id}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.249" starttime="20170531 19:12:30.248"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.249" level="INFO">${bedroomId} = 169</msg>
+<status status="PASS" endtime="20170531 19:12:30.249" starttime="20170531 19:12:30.200"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${get_bedroom_endpoint}</arg>
+<arg>${bedroomId}</arg>
+</arguments>
+<assign>
+<var>${get_bedroom_endpoint}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.250" level="INFO">${get_bedroom_endpoint} = /hotel-rest/webresources/bedroom/169</msg>
+<status status="PASS" endtime="20170531 19:12:30.250" starttime="20170531 19:12:30.249"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedroom_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.254" starttime="20170531 19:12:30.250"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.254" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.254" starttime="20170531 19:12:30.254"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bedroom_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.255" level="INFO">${bedroom_body} = {"id":169,"description":"OYVWXKDLRVEVZID","floor":0,"number":4128,"priceDaily":19,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.255" starttime="20170531 19:12:30.254"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.255" starttime="20170531 19:12:30.255"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${bedroom_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.256" starttime="20170531 19:12:30.255"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.256" starttime="20170531 19:12:30.256"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${bedroom_body_suite}</arg>
+<arg>${bedroom_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.257" level="INFO">${bedroom_body_suite} = {"id":169,"description":"OYVWXKDLRVEVZID","floor":0,"number":4128,"priceDaily":19,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.257" starttime="20170531 19:12:30.256"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.257" level="INFO">${newBedroom} = {"id":169,"description":"OYVWXKDLRVEVZID","floor":0,"number":4128,"priceDaily":19,"bedroomStatusId":{"id":2,"code":1,"name":"VACANT"},"typeBedroomId":{"id":4,"name":"TOP BED TWIN"}}</msg>
+<status status="PASS" endtime="20170531 19:12:30.257" starttime="20170531 19:12:30.199"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${newBedroom}</arg>
+<arg>${room_description_suite}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.258" starttime="20170531 19:12:30.257"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.258" starttime="20170531 19:12:30.153"></status>
+</kw>
+<kw name="Get ID Of The Last Bedroom" library="bedroom_operations">
+<assign>
+<var>${id_to_delete}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.259" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.259" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.259" starttime="20170531 19:12:30.258"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.259" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.259" starttime="20170531 19:12:30.259"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.260" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.260" starttime="20170531 19:12:30.260"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_all_bedrooms_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.268" starttime="20170531 19:12:30.260"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${responseStatus}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.269" level="INFO">${responseStatus} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.269" starttime="20170531 19:12:30.268"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${responseStatus}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.269" starttime="20170531 19:12:30.269"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${bodyRequest}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.270" level="INFO">${bodyRequest} = [{"id":12,"description":"BEDROOM ACCESSIBLE","floor":1,"number":200,"priceDaily":250.00,"bedroomStatusId":{"id":1,"code":0,"name":"VACANT"},"typeBedroomId":{"id":6,"name":"WHEELCHAIR ACCESS"}},{"id":1...</msg>
+<status status="PASS" endtime="20170531 19:12:30.270" starttime="20170531 19:12:30.270"></status>
+</kw>
+<kw name="Get Total Number of Bedrooms" library="bedroom_operations">
+<assign>
+<var>${number_of_bedrooms}</var>
+</assign>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.271" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.272" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.272" starttime="20170531 19:12:30.271"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedrooms_counter_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.278" starttime="20170531 19:12:30.272"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${status_code}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.279" level="INFO">${status_code} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.279" starttime="20170531 19:12:30.279"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${response_body}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.280" level="INFO">${response_body} = 119</msg>
+<status status="PASS" endtime="20170531 19:12:30.280" starttime="20170531 19:12:30.280"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.283" starttime="20170531 19:12:30.280"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.284" starttime="20170531 19:12:30.283"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${status_code}</arg>
+<arg>${status_code_OK}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.285" starttime="20170531 19:12:30.284"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.285" level="INFO">${number_of_bedrooms} = 119</msg>
+<status status="PASS" endtime="20170531 19:12:30.285" starttime="20170531 19:12:30.270"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${number_of_bedrooms}-1</arg>
+</arguments>
+<assign>
+<var>${last_index}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.286" level="INFO">${last_index} = 118</msg>
+<status status="PASS" endtime="20170531 19:12:30.286" starttime="20170531 19:12:30.286"></status>
+</kw>
+<kw name="Get Json Value" library="HttpLibrary.HTTP">
+<doc>Get the target node of the JSON document `json_string` specified by `json_pointer`.</doc>
+<arguments>
+<arg>${bodyRequest}</arg>
+<arg>/${last_index}/id</arg>
+</arguments>
+<assign>
+<var>${json_id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.289" level="INFO">${json_id} = 169</msg>
+<status status="PASS" endtime="20170531 19:12:30.289" starttime="20170531 19:12:30.286"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${json_id}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.290" starttime="20170531 19:12:30.289"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.290" level="INFO">${id_to_delete} = 169</msg>
+<status status="PASS" endtime="20170531 19:12:30.290" starttime="20170531 19:12:30.258"></status>
+</kw>
+<kw name="Create Bedroom Data" library="bedroom_operations">
+<assign>
+<var>${request_body}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${bedStatusId}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.292" level="INFO">${bedStatusId} = 2</msg>
+<status status="PASS" endtime="20170531 19:12:30.292" starttime="20170531 19:12:30.291"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${bedStatusCode}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.292" level="INFO">${bedStatusCode} = 1</msg>
+<status status="PASS" endtime="20170531 19:12:30.292" starttime="20170531 19:12:30.292"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>VACANT</arg>
+</arguments>
+<assign>
+<var>${bedStatusName}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.293" level="INFO">${bedStatusName} = VACANT</msg>
+<status status="PASS" endtime="20170531 19:12:30.294" starttime="20170531 19:12:30.293"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${bedTypeId}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.294" level="INFO">${bedTypeId} = 4</msg>
+<status status="PASS" endtime="20170531 19:12:30.294" starttime="20170531 19:12:30.294"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>TOP BED TWIN</arg>
+</arguments>
+<assign>
+<var>${bedTypeName}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.295" level="INFO">${bedTypeName} = TOP BED TWIN</msg>
+<status status="PASS" endtime="20170531 19:12:30.295" starttime="20170531 19:12:30.295"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.296" level="INFO">${id} = 200</msg>
+<status status="PASS" endtime="20170531 19:12:30.296" starttime="20170531 19:12:30.295"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>15</arg>
+<arg>[UPPER]</arg>
+</arguments>
+<assign>
+<var>${description}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.296" level="INFO">${description} = BNFMBSVBFMUBNKR</msg>
+<status status="PASS" endtime="20170531 19:12:30.297" starttime="20170531 19:12:30.296"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${room_description_suite}</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.298" level="INFO">${room_description_suite} = BNFMBSVBFMUBNKR</msg>
+<status status="PASS" endtime="20170531 19:12:30.298" starttime="20170531 19:12:30.297"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>1</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${floor}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.299" level="INFO">${floor} = 2</msg>
+<status status="PASS" endtime="20170531 19:12:30.299" starttime="20170531 19:12:30.298"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>4</arg>
+<arg>123456789</arg>
+</arguments>
+<assign>
+<var>${number}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.300" level="INFO">${number} = 8516</msg>
+<status status="PASS" endtime="20170531 19:12:30.300" starttime="20170531 19:12:30.299"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>2</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${priceDaily}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.301" level="INFO">${priceDaily} = 32</msg>
+<status status="PASS" endtime="20170531 19:12:30.301" starttime="20170531 19:12:30.300"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${bedStatusId}</arg>
+<arg>code=${bedStatusCode}</arg>
+<arg>name=${bedStatusName}</arg>
+</arguments>
+<assign>
+<var>${bedStatusDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.302" level="INFO">${bedStatusDict} = {u'id': u'2', u'code': u'1', u'name': u'VACANT'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.302" starttime="20170531 19:12:30.301"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${bedTypeId}</arg>
+<arg>name=${bedTypeName}</arg>
+</arguments>
+<assign>
+<var>${typeIdDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.302" level="INFO">${typeIdDict} = {u'id': u'4', u'name': u'TOP BED TWIN'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.303" starttime="20170531 19:12:30.302"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${id}</arg>
+<arg>description=${description}</arg>
+<arg>floor=${floor}</arg>
+<arg>number=${number}</arg>
+<arg>priceDaily=${priceDaily}</arg>
+<arg>bedroomStatusId=${bedStatusDict}</arg>
+<arg>typeBedroomId=${typeIdDict}</arg>
+</arguments>
+<assign>
+<var>${dictionary}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.304" level="INFO">${dictionary} = {u'id': u'200', u'description': u'BNFMBSVBFMUBNKR', u'floor': u'2', u'number': u'8516', u'priceDaily': u'32', u'bedroomStatusId': {u'code': u'1', u'id': u'2', u'name': u'VACANT'}, u'typeBedroomId': {u...</msg>
+<status status="PASS" endtime="20170531 19:12:30.304" starttime="20170531 19:12:30.303"></status>
+</kw>
+<kw name="Stringify Json" library="HttpLibrary.HTTP">
+<doc>Converts the data structure to a string containing its JSON string representation</doc>
+<arguments>
+<arg>${dictionary}</arg>
+</arguments>
+<assign>
+<var>${bedroom_json}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.304" level="INFO">${bedroom_json} = {"id": "200", "description": "BNFMBSVBFMUBNKR", "floor": "2", "number": "8516", "priceDaily": "32", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": ...</msg>
+<status status="PASS" endtime="20170531 19:12:30.304" starttime="20170531 19:12:30.304"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${bedroom_json}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.305" starttime="20170531 19:12:30.304"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.305" level="INFO">${request_body} = {"id": "200", "description": "BNFMBSVBFMUBNKR", "floor": "2", "number": "8516", "priceDaily": "32", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": ...</msg>
+<status status="PASS" endtime="20170531 19:12:30.305" starttime="20170531 19:12:30.290"></status>
+</kw>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.306" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.306" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.306" starttime="20170531 19:12:30.305"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.306" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.306" starttime="20170531 19:12:30.306"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.307" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.307" starttime="20170531 19:12:30.306"></status>
+</kw>
+<kw name="Set Request Body" library="HttpLibrary.HTTP">
+<doc>Set the request body for the next HTTP request.</doc>
+<arguments>
+<arg>${request_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.307" level="INFO">Request body set to "{"id": "200", "description": "BNFMBSVBFMUBNKR", "floor": "2", "number": "8516", "priceDaily": "32", "bedroomStatusId": {"id": "2", "code": "1", "name": "VACANT"}, "typeBedroomId": {"id": "4", "name": "TOP BED TWIN"}}".</msg>
+<status status="PASS" endtime="20170531 19:12:30.307" starttime="20170531 19:12:30.307"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Editing a bedroom${\n}DATA:${request_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.308" starttime="20170531 19:12:30.308"></status>
+</kw>
+<kw name="PUT" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP PUT request.</doc>
+<arguments>
+<arg>${put_edit_bedroom_endpoint}${id_to_delete}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.327" starttime="20170531 19:12:30.308"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${response_status}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.327" level="INFO">${response_status} = 204 No Content</msg>
+<status status="PASS" endtime="20170531 19:12:30.332" starttime="20170531 19:12:30.327"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Status code:${response_status}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.338" starttime="20170531 19:12:30.333"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${response_status}</arg>
+<arg>204</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.339" starttime="20170531 19:12:30.338"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.339" starttime="20170531 19:12:30.153"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.339" critical="yes" starttime="20170531 19:12:30.152"></status>
+</test>
+<test id="s1-t6" name="Test6- get total of bedrooms">
+<kw name="Get The Total Of Bedrooms" library="bedroom_operations">
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.342" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.342" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.343" starttime="20170531 19:12:30.342"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.343" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.343" starttime="20170531 19:12:30.343"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.344" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.344" starttime="20170531 19:12:30.343"></status>
+</kw>
+<kw name="GET" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP GET request.</doc>
+<arguments>
+<arg>${get_bedrooms_counter_endpoint}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.351" starttime="20170531 19:12:30.344"></status>
+</kw>
+<kw name="Get Response Status" library="HttpLibrary.HTTP">
+<doc>Returns the response status line (e.g. "200 OK" or "404 Not found")</doc>
+<assign>
+<var>${response_status}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.351" level="INFO">${response_status} = 200 OK</msg>
+<status status="PASS" endtime="20170531 19:12:30.351" starttime="20170531 19:12:30.351"></status>
+</kw>
+<kw name="Get Response Body" library="HttpLibrary.HTTP">
+<doc>Get the response body.</doc>
+<assign>
+<var>${total_bedrooms}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.352" level="INFO">${total_bedrooms} = 120</msg>
+<status status="PASS" endtime="20170531 19:12:30.352" starttime="20170531 19:12:30.352"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Getting the total of bedrooms:${total_bedrooms}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.353" starttime="20170531 19:12:30.353"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Status code:${response_status}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.353" starttime="20170531 19:12:30.353"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${response_status}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.354" starttime="20170531 19:12:30.354"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.354" starttime="20170531 19:12:30.341"></status>
+</kw>
+<status status="PASS" endtime="20170531 19:12:30.354" critical="yes" starttime="20170531 19:12:30.340"></status>
+</test>
+<test id="s1-t7" name="Test7- Create a new User">
+<kw name="Create A New user" library="user_operations">
+<kw name="Create User Data" library="user_operations">
+<assign>
+<var>${request_body}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${userStatusId}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.356" level="INFO">${userStatusId} = 2</msg>
+<status status="PASS" endtime="20170531 19:12:30.356" starttime="20170531 19:12:30.356"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${userStatusCode}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.356" level="INFO">${userStatusCode} = 1</msg>
+<status status="PASS" endtime="20170531 19:12:30.356" starttime="20170531 19:12:30.356"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>ACTIVE</arg>
+</arguments>
+<assign>
+<var>${userStatusName}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.357" level="INFO">${userStatusName} = ACTIVE</msg>
+<status status="PASS" endtime="20170531 19:12:30.357" starttime="20170531 19:12:30.357"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${userClientId}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.357" level="INFO">${userClientId} = 4</msg>
+<status status="PASS" endtime="20170531 19:12:30.357" starttime="20170531 19:12:30.357"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>YANNE</arg>
+</arguments>
+<assign>
+<var>${userClientName}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.358" level="INFO">${userClientName} = YANNE</msg>
+<status status="PASS" endtime="20170531 19:12:30.358" starttime="20170531 19:12:30.358"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1473249124445</arg>
+</arguments>
+<assign>
+<var>${userCreateDate}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.358" level="INFO">${userCreateDate} = 1473249124445</msg>
+<status status="PASS" endtime="20170531 19:12:30.358" starttime="20170531 19:12:30.358"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${userClientName}</arg>
+<arg>@email.com</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.359" level="INFO">${email} = YANNE@email.com</msg>
+<status status="PASS" endtime="20170531 19:12:30.359" starttime="20170531 19:12:30.358"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>1</arg>
+<arg>MF</arg>
+</arguments>
+<assign>
+<var>${gender}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.359" level="INFO">${gender} = F</msg>
+<status status="PASS" endtime="20170531 19:12:30.359" starttime="20170531 19:12:30.359"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>9</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${socialSecurityNumber}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.360" level="INFO">${socialSecurityNumber} = 644526294</msg>
+<status status="PASS" endtime="20170531 19:12:30.360" starttime="20170531 19:12:30.360"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>50</arg>
+</arguments>
+<assign>
+<var>${id}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.360" level="INFO">${id} = 50</msg>
+<status status="PASS" endtime="20170531 19:12:30.361" starttime="20170531 19:12:30.360"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Yanne</arg>
+</arguments>
+<assign>
+<var>${login}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.362" level="INFO">${login} = Yanne</msg>
+<status status="PASS" endtime="20170531 19:12:30.362" starttime="20170531 19:12:30.361"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1966e694bad90686516f99cdf432800fdca39290</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.363" level="INFO">${password} = 1966e694bad90686516f99cdf432800fdca39290</msg>
+<status status="PASS" endtime="20170531 19:12:30.363" starttime="20170531 19:12:30.363"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${typeUser}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.364" level="INFO">${typeUser} = 2</msg>
+<status status="PASS" endtime="20170531 19:12:30.364" starttime="20170531 19:12:30.363"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${userStatusId}</arg>
+<arg>code=${userStatusCode}</arg>
+<arg>name=${userStatusName}</arg>
+</arguments>
+<assign>
+<var>${userStatusDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.365" level="INFO">${userStatusDict} = {u'id': u'2', u'code': u'1', u'name': u'ACTIVE'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.365" starttime="20170531 19:12:30.364"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${userClientId}</arg>
+<arg>name=${userClientName}</arg>
+<arg>createDate=${userCreateDate}</arg>
+<arg>email= ${email}</arg>
+<arg>gender= ${gender}</arg>
+<arg>socialSecurityNumber=${socialSecurityNumber}</arg>
+</arguments>
+<assign>
+<var>${userClientDict}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.367" level="INFO">${userClientDict} = {u'id': u'4', u'name': u'YANNE', u'createDate': u'1473249124445', u'email': u' YANNE@email.com', u'gender': u' F', u'socialSecurityNumber': u'644526294'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.367" starttime="20170531 19:12:30.366"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=${id}</arg>
+<arg>login=${login}</arg>
+<arg>password=${password}</arg>
+<arg>typeUser=${typeUser}</arg>
+</arguments>
+<assign>
+<var>${dictionary}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.368" level="INFO">${dictionary} = {u'id': u'50', u'login': u'Yanne', u'password': u'1966e694bad90686516f99cdf432800fdca39290', u'typeUser': u'2'}</msg>
+<status status="PASS" endtime="20170531 19:12:30.368" starttime="20170531 19:12:30.367"></status>
+</kw>
+<kw name="Stringify Json" library="HttpLibrary.HTTP">
+<doc>Converts the data structure to a string containing its JSON string representation</doc>
+<arguments>
+<arg>${dictionary}</arg>
+</arguments>
+<assign>
+<var>${user_json}</var>
+</assign>
+<msg timestamp="20170531 19:12:30.368" level="INFO">${user_json} = {"id": "50", "login": "Yanne", "password": "1966e694bad90686516f99cdf432800fdca39290", "typeUser": "2"}</msg>
+<status status="PASS" endtime="20170531 19:12:30.368" starttime="20170531 19:12:30.368"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${user_json}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.369" starttime="20170531 19:12:30.368"></status>
+</kw>
+<msg timestamp="20170531 19:12:30.369" level="INFO">${request_body} = {"id": "50", "login": "Yanne", "password": "1966e694bad90686516f99cdf432800fdca39290", "typeUser": "2"}</msg>
+<status status="PASS" endtime="20170531 19:12:30.369" starttime="20170531 19:12:30.355"></status>
+</kw>
+<kw name="Create Http Context" library="HttpLibrary.HTTP">
+<doc>Sets the HTTP host to use for future requests. You must call this</doc>
+<arguments>
+<arg>${http_context}</arg>
+<arg>${http_variable}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.370" level="INFO">Host for next HTTP request set to 'localhost:8080'</msg>
+<msg timestamp="20170531 19:12:30.370" level="INFO">Scheme for next HTTP request set to 'http'</msg>
+<status status="PASS" endtime="20170531 19:12:30.371" starttime="20170531 19:12:30.370"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>${header_content_json}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.372" level="INFO">Set request header "Content-Type" to "application/json"</msg>
+<status status="PASS" endtime="20170531 19:12:30.372" starttime="20170531 19:12:30.372"></status>
+</kw>
+<kw name="Set Request Header" library="HttpLibrary.HTTP">
+<doc>Sets a request header for the next request.</doc>
+<arguments>
+<arg>Accept</arg>
+<arg>${header_accept_all}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.373" level="INFO">Set request header "Accept" to "*/*"</msg>
+<status status="PASS" endtime="20170531 19:12:30.373" starttime="20170531 19:12:30.372"></status>
+</kw>
+<kw name="Set Request Body" library="HttpLibrary.HTTP">
+<doc>Set the request body for the next HTTP request.</doc>
+<arguments>
+<arg>${request_body}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.374" level="INFO">Request body set to "{"id": "50", "login": "Yanne", "password": "1966e694bad90686516f99cdf432800fdca39290", "typeUser": "2"}".</msg>
+<status status="PASS" endtime="20170531 19:12:30.374" starttime="20170531 19:12:30.373"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Creating a new user${\n}DATA:${request_body}</arg>
+</arguments>
+<status status="PASS" endtime="20170531 19:12:30.375" starttime="20170531 19:12:30.374"></status>
+</kw>
+<kw name="POST" library="HttpLibrary.HTTP">
+<doc>Issues a HTTP POST request.</doc>
+<arguments>
+<arg>${post_create_new_userroom_endpoint}</arg>
+</arguments>
+<msg timestamp="20170531 19:12:30.477" level="FAIL">Request should have succeeded, but was "500 Internal Server Error".</msg>
+<status status="FAIL" endtime="20170531 19:12:30.477" starttime="20170531 19:12:30.375"></status>
+</kw>
+<status status="FAIL" endtime="20170531 19:12:30.478" starttime="20170531 19:12:30.355"></status>
+</kw>
+<status status="FAIL" endtime="20170531 19:12:30.487" critical="yes" starttime="20170531 19:12:30.355">Request should have succeeded, but was "500 Internal Server Error".</status>
+</test>
+<status status="FAIL" endtime="20170531 19:12:30.487" starttime="20170531 19:12:29.720"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="5">Critical Tests</stat>
+<stat fail="2" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Test.Suite" pass="5">Test.Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170531 19:12:29.929" level="ERROR">Error in file '/home/robot/workspace/Project-CI-LaxmanaT-MasoomehB/robot-backend/test.suite.robot': Resource file 'reservation_operations.robot' does not exist.</msg>
+</errors>
+</robot>

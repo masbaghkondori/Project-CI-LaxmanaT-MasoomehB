@@ -1,0 +1,228 @@
+*** comments ***
+
+Edit Bedroom Data     [Arguments]    ${bedroom}       ${update_value} 
+    
+    ${bedStatusId}=                Get Json Value             ${bedroom}         /bedroomStatusId/id
+    ${bedStatusCode}=              Get Json Value             ${bedroom}         /bedroomStatusId/code
+    ${bedStatusName}=              Get Json Value             ${bedroom}         /bedroomStatusId/name
+    
+    ${bedTypeId}=                   Get Json Value             ${bedroom}         /typeBedroomId/id
+    ${bedTypeName}=                  Get Json Value             ${bedroom}         /typeBedroomId/name
+    
+    ${id}=                          Get Json Value             ${bedroom}         /id
+    ${description}=                 Get Json Value             ${bedroom}         /description
+    ${floor}=                       Get Json Value             ${bedroom}         /floor
+    ${number}=                        Get Json Value             ${bedroom}         /number
+    ${priceDaily}=                  Set Variable               ${update_value}
+    Set Suite Variable               ${editedPrice}     ${priceDaily}       
+    
+    ${description}=                  Remove String             ${description}        \"
+    ${bedStatusName}=                Remove String             ${bedStatusName}         \"
+    ${bedTypeName}=                  Remove String             ${bedTypeName}           \"
+    ${bedStatusName}=                Remove String             ${bedStatusName}         \\
+    ${bedTypeName}=                  Remove String             ${bedTypeName}           \\
+    ${bedStatusDict}=                Create Dictionary         id=${bedStatusId}    code=${bedStatusCode}    name=${bedStatusName}
+    ${typeIdDict}=                  Create Dictionary         id=${bedTypeId}    name=${bedTypeName}
+    ${dictionary}=                  Create Dictionary         id=${id}    description=${description}    floor=${floor}    number=${number}    priceDaily=${priceDaily}    bedroomStatusId=${bedStatusDict}   typeBedroomId=${typeIdDict}
+    ${bedroom_json}=                Stringify Json            ${dictionary}
+    Log to Console                \n"Edited json data:"\n${bedroom_json}
+    [Return]                      ${bedroom_json}       
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** Settings ***
+Library                              HttpLibrary.HTTP
+Library                              String
+Library                              Collections
+Resource                             api_variables.robot
+
+*** Variables ***
+
+#GET endpoints
+${get_all_bedrooms_endpoint}=         /hotel-rest/webresources/bedroom
+${get_bedroom_endpoint}=              /hotel-rest/webresources/bedroom/            #the id should be included
+${get_bedrooms_counter_endpoint}=     /hotel-rest/webresources/bedroom/count
+
+#POST endpoint
+ ${create_a_bedroom_endpoint}=      /hotel-rest/webresources/bedroom
+
+#PUT endpoint
+${put_update_bedroom_endpoint}=         /hotel-rest/webresources/bedroom/          #the id should be included   
+
+#DELETE endpoint
+${delete_bedroom_endpoint}=            /hotel-rest/webresources/bedroom/          #the id should be included
+
+*** Keywords ***
+
+## Method using the GET   /webresources/bedroom/count
+Get the total of bedrooms                      
+    Create Http Context              ${http_context}     ${http_variable}     
+    Set Request Header               Content-Type        ${header_content_json}
+    Set Request Header               Accept              ${header_accept_all}
+    HttpLibrary.HTTP.GET             ${get_bedrooms_counter_endpoint}    
+    ${response_status}=              Get response Status
+    ${total_bedrooms}=                Get response body      
+    log to console                   ${\n}Getting the total of bedrooms:${total_bedrooms}
+    log to console                   ${\n}Status bedroomStatusCode:${response_status}   
+    Should contain                   ${response_status}	                      200 
+    #log to console                   ${total_bedrooms}
+    [Return]                         ${total_bedrooms}             
+
+ 
+    
+    ## Method using  POST  /webresources/bedroom/count
+Get Last Exist Bedroom        
+    ${bedroomId}=                    Get ID of The Last Bedroom
+    ${get_bedroom_endpoint}=         Catenate       SEPARATOR=       ${get_bedroom_endpoint}        ${bedroomId}
+    GET                              ${get_bedroom_endpoint}
+     ${response_status}                 Get Response Status
+    ${bedroom_body}=                 Get Response Body
+    Log to Console                   ${bedroom_body}
+  Should contain                    ${response_status}	                      200    
+    Set Suite Variable               ${bedroom_body_suite}                   ${bedroom_body}
+    
+    [Return]                         ${bedroom_body}
+     
+
+
+    
+
+
+    
+    
+Create Bedroom Data
+    ${bedroomStatusId} =          Set Variable                   2
+    ${bedroomStatusCode}=         Set Variable                   0         
+    ${bedroomStatusName}=         Set Variable                   VACANT
+   
+    ${bedTypeId}=                 Set Variable                  4
+    ${bedTypeName}=               Set Variable                  TOP BED KING 
+   
+    ${id}=                        Set Variable                  105
+    ${description}=               Generate Random String        15        [UPPER]
+    Set Suite Variable            ${room_description_suite}               ${description} 
+          
+    ${floor}=                     Generate Random String         1          [NUMBERS]
+    ${number}=                    Generate Random String         4          123456789
+    ${priceDaily}=                Generate Random String         3          [NUMBERS]
+    
+    ${dictStatus}=               Create Dictionary     id=${bedroomStatusId}    bedroomStatusCode=${bedroomStatusCode}    name=${bedroomStatusName}
+    ${dictType}=                 Create Dictionary     id=${bedTypeId}      name=${bedTypeName}
+    ${dictionary}=               Create Dictionary     id=${id}          description=${description}    floor=${floor}    number=${number}    priceDaily=${priceDaily}    bedroomStatusId=${dictStatus}   typeBedroomId=${dictType}
+    ${beroomJson}=               Stringify Json        ${dictionary}
+     [Return]                      ${beroomJson}             
+
+
+## Method using  POST  /webresources/bedroom/count
+Create a new bedroom
+    ${request_body}=           Create Bedroom Data
+    Log to Console               ${request_body}\nrequest_body\n   
+    Create Http Context        ${http_context}                  ${http_variable}
+    Set Request Header         Content-Type                     ${header_content_json}
+    Set Request Header         Accept                           ${header_accept_all}      
+    Set Request Body           ${request_body}    
+    HttpLibrary.HTTP.POST      ${create_a_bedroom_endpoint}         
+    Log to Console              /npsotpost/n   
+    ${response_status}=        Get Response Status
+    Log to Console             ${\n}Status code:${response_status} 
+    Should contain              ${response_status}	      204
+
+
+Delete a bedroom   
+    Create a new bedroom
+    ${id_to_delete}=                 Get Last Exist Bedroom        
+    #log to console                   ${id_to_delete} 
+    Create Http Context              ${http_context}     ${http_variable}    
+    Set Request Header               Content-Type        ${header_content_json}
+    Set Request Header               Accept              ${header_accept_all} 
+    Log to console                   ${\n}Deleting a bedroom${\n}ID:${id_to_delete}
+    HttpLibrary.HTTP.DELETE          ${delete_a_bedroom_endpoint}${id_to_delete}
+    ${response_status}=              Get response Status   
+    log to console                   ${\n}Status bedroomStatusCode:${response_status}   
+    Should contain                   ${response_status}	                      204
+    
+
+Edit a bedroom   
+    
+   # Create a bedroom     
+    Get Last Exist Bedroom 
+    ${id_to_Edit}=                 Get Last Exist Bedroom       
+   # ${request_body} =                Create a new bedroom
+   ${request_body} =                Get Last Exist Bedroom 
+      Log to Console              /np8888888t/n  
+    Create Http Context              ${http_context}     ${http_variable}    
+    Set Request Header               Content-Type        ${header_content_json}
+    Set Request Header               Accept              ${header_accept_all} 
+    Set request body                 ${request_body}
+        
+    Log to console                   ${\n}Editing a bedroom${\n}DATA:${request_body}
+    
+    HttpLibrary.HTTP.PUT             ${edit_a_bedroom_endpoint}${id_to_Edit}    
+    ${response_status}=              Get response Status   
+    log to console                   ${\n}Status bedroomStatusCode:${response_status}   
+    Should contain                   ${response_status}	                      204
+
+       
+ Get ID of The Last Bedroom        
+    Create Http Context              ${http_context}     ${http_variable}   
+    Set Request Header               Content-Type        ${header_content_json}
+    Set Request Header               Accept              ${header_accept_all}  
+    HttpLibrary.HTTP.GET             ${get_all_bedrooms_endpoint}
+    ${response_status}=              Get response Status   
+    log to console                   ${response_status}   
+    Should contain                   ${response_status}	                      200    
+    ${body}=                         Get Response Body    
+    ${total_of_bedrooms}=             Get the total of bedrooms  
+    ${last_index}=                   Evaluate    ${total_of_bedrooms} - 1
+    ${json_id}=                      Get Json Value             ${body}        /${last_index}/id
+    #log to console  ${json_id}
+    [return]                         ${json_id}
+
+
+    
+    
+  
+   
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
